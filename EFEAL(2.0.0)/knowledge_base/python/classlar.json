@@ -1,0 +1,31 @@
+{
+  "topic": "Python Sınıflar",
+  "subtopic": "classlar",
+  "difficulty": "Orta",
+  "definitions": [
+    {
+      "id": "sinif_tanim",
+      "content": "Sınıf (class), nesne yönelimli programlamanın temel yapı taşıdır. Veri (özellikler) ve davranış (metodlar) için şablon tanımlar. class anahtar kelimesiyle oluşturulur."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Temel Sınıf",
+      "code": "class Araba:\n    # Sınıf değişkeni (tüm nesneler paylaşır)\n    tekerlek_sayisi = 4\n\n    def __init__(self, marka: str, model: str, yil: int):\n        # Örnek değişkenleri\n        self.marka = marka\n        self.model = model\n        self.yil = yil\n        self._hiz = 0  # Özel değişken\n\n    def hizlan(self, miktar: int) -> None:\n        self._hiz = min(250, self._hiz + miktar)\n\n    def __str__(self) -> str:\n        return f'{self.yil} {self.marka} {self.model}'\n\n    def __repr__(self) -> str:\n        return f'Araba(marka={self.marka!r}, yil={self.yil})'\n\narslan = Araba('Toyota', 'Corolla', 2023)\narslan.hizlan(60)\nprint(arslan)  # 2023 Toyota Corolla"
+    },
+    {
+      "title": "Kalıtım",
+      "code": "class ElektrikliAraba(Araba):\n    def __init__(self, marka, model, yil, batarya_kwh):\n        super().__init__(marka, model, yil)\n        self.batarya_kwh = batarya_kwh\n\n    def sarj_suresi(self) -> float:\n        return self.batarya_kwh / 11  # 11kW şarj hızı\n\ntesla = ElektrikliAraba('Tesla', 'Model 3', 2024, 75)\nprint(tesla.sarj_suresi())  # 6.8 saat"
+    }
+  ],
+  "tips": [
+    {"tip": "@dataclass dekoratörü ile basit veri sınıflarını hızlı oluştur.", "category": "Modern Python"},
+    {"tip": "_ öneki özel (private), __ öneki name-mangling uygulanmış.", "category": "Kapsülleme"},
+    {"tip": "__str__ kullanıcı için, __repr__ geliştirici için tanımlanır.", "category": "Sihirli Metodlar"}
+  ],
+  "errors": [
+    {"problem": "AttributeError: object has no attribute", "solution": "__init__ içinde self.ozellik = deger tanımladığından emin ol"},
+    {"problem": "super() çağrısını unutmak", "solution": "Kalıtımda __init__ içinde super().__init__() çağır"}
+  ],
+  "related_topics": ["Python", "Fonksiyonlar", "Dekoratörler", "Tasarım Desenleri"]
+}

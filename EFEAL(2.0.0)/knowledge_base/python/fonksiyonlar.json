@@ -1,0 +1,35 @@
+{
+  "topic": "Python Fonksiyonlar",
+  "subtopic": "fonksiyonlar",
+  "difficulty": "Başlangıç",
+  "definitions": [
+    {
+      "id": "fonksiyon_tanim",
+      "content": "Fonksiyon, belirli bir görevi yerine getiren, adlandırılmış ve yeniden kullanılabilir kod bloğudur. def anahtar kelimesiyle tanımlanır ve return ile değer döndürür."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Temel Fonksiyon",
+      "code": "def selamla(isim: str, resmi: bool = False) -> str:\n    \"\"\"Kişiyi selamlar.\"\"\"\n    if resmi:\n        return f'Sayın {isim}, iyi günler.'\n    return f'Merhaba, {isim}!'\n\nprint(selamla('Efe'))           # Merhaba, Efe!\nprint(selamla('Efe', True))     # Sayın Efe, iyi günler."
+    },
+    {
+      "title": "Lambda ve Map",
+      "code": "# Lambda — tek satır anonim fonksiyon\nkare = lambda x: x ** 2\n\n# map ile liste üzerinde uygula\nsayilar = [1, 2, 3, 4, 5]\nkareler = list(map(kare, sayilar))\nprint(kareler)  # [1, 4, 9, 16, 25]\n\n# Daha Pythonic: list comprehension\nkareler = [x**2 for x in sayilar]"
+    },
+    {
+      "title": "*args ve **kwargs",
+      "code": "def topla(*args: int) -> int:\n    \"\"\"Sınırsız sayıda argüman alır.\"\"\"\n    return sum(args)\n\ndef bilgi(**kwargs) -> None:\n    \"\"\"Anahtar-değer çifti alır.\"\"\"\n    for k, v in kwargs.items():\n        print(f'{k}: {v}')\n\nprint(topla(1, 2, 3, 4))     # 10\nbilgi(isim='Efe', yas=20)    # isim: Efe / yas: 20"
+    }
+  ],
+  "tips": [
+    {"tip": "Her fonksiyon tek bir iş yapmalı — Single Responsibility Principle.", "category": "Tasarım"},
+    {"tip": "Docstring ekle — IDE ve dökümantasyon araçları bunu kullanır.", "category": "Belgeleme"},
+    {"tip": "Default argümanlar mutable (list, dict) olmamalı — class değişken tuzağına düşersin.", "category": "Tuzak"}
+  ],
+  "errors": [
+    {"problem": "Fonksiyon None dönüyor", "solution": "return ifadesi eksik; her koşul dalında return olduğuna emin ol"},
+    {"problem": "Mutable default argument sorunu", "solution": "def f(liste=None): liste = liste or [] kullan"}
+  ],
+  "related_topics": ["Python", "Listeler", "Sınıflar", "Dekoratörler"]
+}

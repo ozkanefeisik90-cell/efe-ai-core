@@ -1,0 +1,31 @@
+{
+  "topic": "Python Listeler",
+  "subtopic": "listeler",
+  "difficulty": "Başlangıç",
+  "definitions": [
+    {
+      "id": "liste_tanim",
+      "content": "Liste, sıralı ve değiştirilebilir veri koleksiyonudur. Farklı türdeki elemanları barındırabilir. Köşeli parantez [] ile tanımlanır ve sıfır tabanlı indeksleme kullanır."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Liste İşlemleri",
+      "code": "meyveler = ['elma', 'armut', 'muz']\n\n# Erişim\nprint(meyveler[0])    # elma\nprint(meyveler[-1])   # muz (sondan)\n\n# Dilimleme\nprint(meyveler[1:3])  # ['armut', 'muz']\n\n# Ekleme / Silme\nmeyveler.append('kiraz')    # Sona ekle\nmeyveler.insert(1, 'üzüm') # Konuma ekle\nmeyveler.remove('elma')     # Değere göre sil\ncikarilan = meyveler.pop()  # Sondan çıkar"
+    },
+    {
+      "title": "List Comprehension",
+      "code": "sayilar = range(1, 11)\n\n# Temel\nkareler = [x**2 for x in sayilar]\n\n# Koşullu\nciftler = [x for x in sayilar if x % 2 == 0]\n\n# İç içe\nmatris = [[i*j for j in range(1, 4)] for i in range(1, 4)]"
+    }
+  ],
+  "tips": [
+    {"tip": "append() O(1), insert(0, x) ise O(n) — başa ekleme için collections.deque kullan.", "category": "Performans"},
+    {"tip": "sorted() yeni liste döner, .sort() yerinde sıralar.", "category": "Davranış"},
+    {"tip": "Liste kopyası için liste[:] veya liste.copy() kullan — doğrudan atama referans kopyalar.", "category": "Tuzak"}
+  ],
+  "errors": [
+    {"problem": "IndexError: list index out of range", "solution": "İndeks değerinin 0 ile len(liste)-1 arasında olduğunu kontrol et"},
+    {"problem": "Liste silinmeden for döngüsü", "solution": "For döngüsünde listeyi değiştirme; kopya üzerinde işle"}
+  ],
+  "related_topics": ["Python", "Tuple", "Sözlük", "Fonksiyonlar"]
+}

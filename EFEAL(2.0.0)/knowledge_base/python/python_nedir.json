@@ -1,0 +1,32 @@
+{
+  "topic": "Python",
+  "subtopic": "python_nedir",
+  "difficulty": "Başlangıç",
+  "definitions": [
+    {
+      "id": "python_tanim",
+      "content": "Python, 1991 yılında Guido van Rossum tarafından geliştirilen, yüksek seviyeli, yorumlanan ve genel amaçlı bir programlama dilidir. Okunabilirliği, sade sözdizimi ve geniş kütüphane ekosistemi ile bilinir."
+    }
+  ],
+  "examples": [
+    {
+      "title": "İlk Python Programı",
+      "code": "# Merhaba Dünya\nprint('Merhaba, Dünya!')\n\n# Değişken tanımlama (tür belirtmeye gerek yok)\nisim = 'EFEAI'\nyas = 1\naktif = True\n\nprint(f'{isim} yaşı: {yas}')"
+    },
+    {
+      "title": "Fonksiyon ve Liste",
+      "code": "def kare_al(sayilar: list) -> list:\n    \"\"\"Listedeki her sayının karesini döner.\"\"\"\n    return [x ** 2 for x in sayilar]\n\nsayilar = [1, 2, 3, 4, 5]\nkareler = kare_al(sayilar)\nprint(kareler)  # [1, 4, 9, 16, 25]"
+    }
+  ],
+  "tips": [
+    {"tip": "Python 3.10+ kullan — pattern matching ve daha iyi hata mesajları içerir.", "category": "Sürüm"},
+    {"tip": "PEP 8 stil rehberine uy — 4 boşluk girinti, snake_case değişkenler.", "category": "Stil"},
+    {"tip": "Type hint kullan — kod okunabilirliğini ve hata tespitini artırır.", "category": "Kalite"}
+  ],
+  "errors": [
+    {"problem": "IndentationError", "solution": "Sekme ve boşluğu karıştırma; sadece 4 boşluk kullan"},
+    {"problem": "ModuleNotFoundError", "solution": "pip install paket_adi ile paketi kur"},
+    {"problem": "TypeError: unsupported operand", "solution": "Farklı türleri doğrudan işleyemezsin; int(x) veya str(x) ile dönüştür"}
+  ],
+  "related_topics": ["Fonksiyonlar", "Listeler", "Sınıflar", "Dosya İşlemleri"]
+}
