@@ -1,0 +1,34 @@
+{
+  "topic": "CSS",
+  "subtopic": "css_nedir",
+  "difficulty": "Başlangıç",
+  "definitions": [
+    {
+      "id": "css_tanim",
+      "content": "CSS (Cascading Style Sheets), HTML ile oluşturulan web sayfalarının görünümünü ve biçimini tanımlayan stil dilidir. Renk, yazı tipi, boşluk, yerleşim gibi tüm görsel özellikler CSS ile kontrol edilir."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Temel CSS Kullanımı",
+      "description": "Seçici, özellik ve değer yapısı",
+      "code": "/* Temel sözdizimi */\nseçici {\n    özellik: değer;\n}\n\n/* Örnekler */\nh1 {\n    color: #2563eb;\n    font-size: 2rem;\n    font-weight: bold;\n}\n\np {\n    color: #334155;\n    line-height: 1.6;\n    margin-bottom: 1rem;\n}"
+    },
+    {
+      "title": "CSS Bağlama Yöntemleri",
+      "description": "External, internal ve inline CSS",
+      "code": "<!-- 1. External CSS (Önerilen) -->\n<link rel=\"stylesheet\" href=\"stil.css\">\n\n<!-- 2. Internal CSS -->\n<style>\n  body { background: #f0f0f0; }\n</style>\n\n<!-- 3. Inline CSS (Önerilmez) -->\n<p style=\"color: red;\">Metin</p>"
+    }
+  ],
+  "tips": [
+    {"tip": "External CSS kullan — HTML ile stilleri ayırarak bakımı kolaylaştırır.", "category": "En İyi Pratik"},
+    {"tip": "class seçicilerini id'ye tercih et — yeniden kullanılabilirlik sağlar.", "category": "Mimari"},
+    {"tip": "CSS değişkenlerini (custom properties) kullan — tekrar eden değerleri merkezileştirir.", "category": "Verimlilik"}
+  ],
+  "errors": [
+    {"problem": "Stil uygulanmıyor", "solution": "Seçiciyi ve class/id eşleşmesini kontrol et; özgüllük (specificity) sorununa bak"},
+    {"problem": "Margin yatayda çalışmıyor", "solution": "Block element için margin: 0 auto kullan, width tanımla"},
+    {"problem": "Float sonrası parent çöküyor", "solution": "overflow: hidden veya clearfix hack kullan, ya da Flexbox'a geç"}
+  ],
+  "related_topics": ["HTML", "Flexbox", "Grid", "Responsive Tasarım"]
+}

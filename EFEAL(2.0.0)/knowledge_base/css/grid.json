@@ -1,0 +1,30 @@
+{
+  "topic": "CSS Grid",
+  "subtopic": "grid",
+  "difficulty": "Orta",
+  "definitions": [
+    {
+      "id": "grid_tanim",
+      "content": "CSS Grid, iki boyutlu (satır ve sütun) düzen oluşturmak için kullanılan güçlü CSS sistemidir. Karmaşık sayfa düzenlerini az kodla yaratmayı sağlar."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Temel Grid",
+      "code": ".izgara {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    gap: 1rem;\n}\n\n/* fr = fractional unit (oransal birim) */"
+    },
+    {
+      "title": "Sayfa Düzeni",
+      "code": ".sayfa {\n    display: grid;\n    grid-template-areas:\n        'header header'\n        'sidebar main'\n        'footer footer';\n    grid-template-columns: 250px 1fr;\n    grid-template-rows: auto 1fr auto;\n    min-height: 100vh;\n}\n\nheader { grid-area: header; }\n.sidebar { grid-area: sidebar; }\nmain { grid-area: main; }\nfooter { grid-area: footer; }"
+    }
+  ],
+  "tips": [
+    {"tip": "repeat(auto-fit, minmax(300px, 1fr)) ile otomatik responsive ızgara yap.", "category": "Responsive"},
+    {"tip": "grid-template-areas ile görsel düzen tanımlaması okunabilirliği artırır.", "category": "Okunabilirlik"}
+  ],
+  "errors": [
+    {"problem": "Eleman grid sütununu aşıyor", "solution": "grid-column: span N ile kaç sütun kaplayacağını belirt"},
+    {"problem": "Grid satırları çöküyor", "solution": "grid-template-rows: auto veya min-content tanımla"}
+  ],
+  "related_topics": ["Flexbox", "CSS", "Responsive Tasarım"]
+}

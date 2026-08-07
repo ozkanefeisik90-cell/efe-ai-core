@@ -1,0 +1,36 @@
+{
+  "topic": "Flexbox",
+  "subtopic": "flexbox",
+  "difficulty": "Orta",
+  "definitions": [
+    {
+      "id": "flexbox_tanim",
+      "content": "Flexbox (Flexible Box Layout), tek boyutlu düzeni (satır veya sütun) yönetmek için tasarlanmış CSS modülüdür. Elemanları hizalamak, boşluk dağıtmak ve sıralamak için güçlü ve esnek bir yöntem sunar."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Merkeze Hizalama",
+      "description": "Yatay ve dikey merkeze alma",
+      "code": ".merkez {\n    display: flex;\n    justify-content: center; /* Yatay */\n    align-items: center;     /* Dikey */\n    height: 100vh;\n}"
+    },
+    {
+      "title": "Navigasyon Çubuğu",
+      "code": ".nav {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 1rem 2rem;\n}\n\n.nav-linkler {\n    display: flex;\n    gap: 1.5rem;\n    list-style: none;\n}"
+    },
+    {
+      "title": "Kart Izgara",
+      "code": ".kart-izgara {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 1rem;\n}\n\n.kart {\n    flex: 1 1 300px; /* büyü | küçül | temel genişlik */\n}"
+    }
+  ],
+  "tips": [
+    {"tip": "gap özelliği margin'den daha temiz aralık sağlar.", "category": "Pratik"},
+    {"tip": "flex: 1 kısaltması flex-grow:1, flex-shrink:1, flex-basis:0 demektir.", "category": "Kısaltma"},
+    {"tip": "İki boyutlu düzen için CSS Grid'e geç.", "category": "Mimari"}
+  ],
+  "errors": [
+    {"problem": "Flex elemanlar taşıyor", "solution": "flex-wrap: wrap ekle"},
+    {"problem": "Elemanlar eşit genişlikte değil", "solution": "flex: 1 kullan — tüm elemanları eşit genişliğe getirir"}
+  ],
+  "related_topics": ["CSS Grid", "CSS", "Responsive Tasarım"]
+}
