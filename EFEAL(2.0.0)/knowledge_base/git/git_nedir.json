@@ -1,0 +1,32 @@
+{
+  "topic": "Git",
+  "subtopic": "git_nedir",
+  "difficulty": "Başlangıç",
+  "definitions": [
+    {
+      "id": "git_tanim",
+      "content": "Git, dağıtık versiyon kontrol sistemidir. Kod değişikliklerini takip eder, geçmişe dönmeyi, dal (branch) oluşturmayı ve ekip çalışmasını kolaylaştırır. 2005'te Linus Torvalds tarafından geliştirilmiştir."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Temel Git İş Akışı",
+      "code": "# Başlangıç\ngit init                        # Yeni repo oluştur\ngit clone https://...git        # Mevcut repoyu klonla\n\n# Değişiklik takibi\ngit status                      # Durumu gör\ngit add dosya.py                # Sahneye ekle\ngit add .                       # Tümünü ekle\ngit commit -m 'feat: yeni özellik eklendi'\n\n# Remote\ngit remote add origin URL\ngit push origin main\ngit pull origin main\n\n# Dal işlemleri\ngit branch yeni-ozellik         # Dal oluştur\ngit checkout yeni-ozellik       # Dala geç\ngit checkout -b fix/hata-duzelt # Oluştur ve geç\ngit merge yeni-ozellik          # Birleştir"
+    },
+    {
+      "title": "Geri Alma İşlemleri",
+      "code": "git restore dosya.py            # Değişikliği geri al\ngit restore --staged dosya.py   # Sahneyi geri al\ngit revert HEAD                 # Son commit'i geri al (güvenli)\ngit reset --soft HEAD~1         # Son commit'i geri al (commit geri al)\ngit log --oneline               # Geçmişi gör"
+    }
+  ],
+  "tips": [
+    {"tip": "Commit mesajı: 'feat:', 'fix:', 'docs:' önekleri kullan — Conventional Commits.", "category": "Kural"},
+    {"tip": ".gitignore ile __pycache__, .env, node_modules hariç tut.", "category": "Güvenlik"},
+    {"tip": "main/dev/feature/* dal stratejisi (Git Flow) büyük projelerde düzen sağlar.", "category": "Strateji"}
+  ],
+  "errors": [
+    {"problem": "Merge conflict", "solution": "Çatışan dosyayı aç, <<< >>> işaretleri arasını düzenle, git add + git commit"},
+    {"problem": "Yanlış commit'e push", "solution": "git push --force-with-lease — dikkatli kullan, takım reposunda tehlikeli"},
+    {"problem": "Gizli anahtar commit'lendi", "solution": "git rm --cached dosya, .gitignore güncelle, anahtarı hemen değiştir"}
+  ],
+  "related_topics": ["GitHub", "GitLab", "CI/CD", "Versiyon Kontrolü"]
+}
