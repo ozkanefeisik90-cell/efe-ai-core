@@ -1,0 +1,32 @@
+{
+  "topic": "Java",
+  "subtopic": "java_nedir",
+  "difficulty": "Orta",
+  "definitions": [
+    {
+      "id": "java_tanim",
+      "content": "Java, nesne yönelimli, statik tipli ve platform bağımsız programlama dilidir. 'Bir yaz, her yerde çalıştır' felsefesiyle JVM (Java Virtual Machine) üzerinde çalışır. Kurumsal uygulamalar, Android ve büyük ölçekli sistemlerde yaygındır."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Temel Java Sınıfı",
+      "code": "public class Merhaba {\n    // main metodu — giriş noktası\n    public static void main(String[] args) {\n        String isim = \"EFEAI\";\n        int yas = 1;\n        System.out.printf(\"Merhaba, %s! Yaş: %d%n\", isim, yas);\n\n        // Dizi\n        int[] sayilar = {1, 2, 3, 4, 5};\n        for (int s : sayilar) {\n            System.out.print(s + \" \");\n        }\n    }\n}"
+    },
+    {
+      "title": "Sınıf ve Kalıtım",
+      "code": "public abstract class Sekil {\n    protected String renk;\n\n    public Sekil(String renk) {\n        this.renk = renk;\n    }\n\n    public abstract double alan();\n\n    @Override\n    public String toString() {\n        return renk + \" renk, alan: \" + alan();\n    }\n}\n\npublic class Daire extends Sekil {\n    private final double yaricap;\n\n    public Daire(String renk, double yaricap) {\n        super(renk);\n        this.yaricap = yaricap;\n    }\n\n    @Override\n    public double alan() {\n        return Math.PI * yaricap * yaricap;\n    }\n}"
+    }
+  ],
+  "tips": [
+    {"tip": "NullPointerException en yaygın hatadır — Optional<T> kullan.", "category": "Güvenlik"},
+    {"tip": "String birleştirme için döngüde StringBuilder kullan — performans farkı büyüktür.", "category": "Performans"},
+    {"tip": "Java 17+ LTS kullan — record, sealed class ve modern özellikler içerir.", "category": "Sürüm"}
+  ],
+  "errors": [
+    {"problem": "NullPointerException", "solution": "Nesneyi kullanmadan önce null kontrolü yap veya Optional kullan"},
+    {"problem": "ClassCastException", "solution": "instanceof ile tür kontrolü yap: if (nesne instanceof Daire d)"},
+    {"problem": "StackOverflowError", "solution": "Özyinelemeli metodda temel durum eksik veya yanlış"}
+  ],
+  "related_topics": ["OOP", "Spring", "Maven", "Android"]
+}
