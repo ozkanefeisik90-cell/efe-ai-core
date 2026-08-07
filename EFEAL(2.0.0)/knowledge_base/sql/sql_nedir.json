@@ -1,0 +1,32 @@
+{
+  "topic": "SQL",
+  "subtopic": "sql_nedir",
+  "difficulty": "Başlangıç",
+  "definitions": [
+    {
+      "id": "sql_tanim",
+      "content": "SQL (Structured Query Language), ilişkisel veritabanlarını yönetmek için kullanılan standart sorgu dilidir. Veri sorgulama (SELECT), ekleme (INSERT), güncelleme (UPDATE), silme (DELETE) ve tablo yönetimi işlemlerini kapsar."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Temel CRUD İşlemleri",
+      "code": "-- Tablo oluştur\nCREATE TABLE kullanicilar (\n    id      INTEGER PRIMARY KEY AUTOINCREMENT,\n    isim    TEXT    NOT NULL,\n    eposta  TEXT    UNIQUE NOT NULL,\n    tarih   TEXT    DEFAULT (datetime('now'))\n);\n\n-- Veri ekle\nINSERT INTO kullanicilar (isim, eposta)\nVALUES ('Efe Yılmaz', 'efe@ornek.com');\n\n-- Veri sorgula\nSELECT id, isim, eposta FROM kullanicilar\nWHERE isim LIKE 'Efe%'\nORDER BY id DESC\nLIMIT 10;\n\n-- Güncelle\nUPDATE kullanicilar\nSET isim = 'Efe A. Yılmaz'\nWHERE id = 1;\n\n-- Sil\nDELETE FROM kullanicilar WHERE id = 1;"
+    },
+    {
+      "title": "JOIN İşlemleri",
+      "code": "-- İki tabloyu birleştir\nSELECT u.isim, s.baslik, s.tarih\nFROM kullanicilar u\nINNER JOIN siparisler s ON u.id = s.kullanici_id\nWHERE s.durum = 'tamamlandi'\nORDER BY s.tarih DESC;"
+    }
+  ],
+  "tips": [
+    {"tip": "SELECT * yerine sadece gerekli sütunları seç — performans artar.", "category": "Performans"},
+    {"tip": "Parametre bağlama kullan — SQL injection'dan korunur.", "category": "Güvenlik"},
+    {"tip": "INDEX ekle — WHERE ve JOIN sütunlarına eklemek sorguları hızlandırır.", "category": "Optimizasyon"}
+  ],
+  "errors": [
+    {"problem": "SQL injection açığı", "solution": "Asla string birleştirme yapma; parametre bağlama kullan: cursor.execute(sql, (değer,))"},
+    {"problem": "Duplicate key error", "solution": "INSERT OR IGNORE veya ON CONFLICT kullan"},
+    {"problem": "GROUP BY hatası", "solution": "SELECT'teki tüm non-aggregate sütunlar GROUP BY'da olmalı"}
+  ],
+  "related_topics": ["SQLite", "PostgreSQL", "MySQL", "Veritabanı Tasarımı"]
+}
