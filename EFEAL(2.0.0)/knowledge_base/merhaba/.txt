@@ -1,0 +1,441 @@
+{
+  "topic": "Conservation",
+  "version": "1.0",
+  "last_updated": "2026-07-20",
+  "difficulty": "Başlangıç",
+  "tags_keywords": ["merhaba", "selam", "selamlar","Naber","Nasıl gidiyor"],
+
+  "definitions": [
+    {
+      "id":  "conservation_001",
+      "title": "Merhaba Nasılsın",
+      "content": "",
+      "difficulty": "Başlangıç",
+      "keywords": ["", "", ""]
+    },
+    {
+      "id": "html_002",
+      "title": "HTML Belgesi Yapısı",
+      "content": "Bir HTML belgesi DOCTYPE bildirimi, html, head ve body etiketlerinden oluşur. head bölümü meta bilgileri içerirken body bölümü görünür içeriği barındırır.",
+      "difficulty": "Başlangıç",
+      "keywords": ["html yapısı", "belge yapısı", "doctype", "head", "body"]
+    },
+    {
+      "id": "html_003",
+      "title": "Semantik HTML",
+      "content": "Semantik etiketler, içeriğin anlamını hem tarayıcıya hem de geliştiriciye açıkça belirtir. header, nav, main, article, section, footer gibi etiketler semantik etiketlere örnektir.",
+      "difficulty": "Orta",
+      "keywords": ["semantik", "semantic", "anlamlı etiket", "header", "nav", "footer"]
+    },
+    {
+      "id": "html_004",
+      "title": "HTML Öznitelikleri (Attributes)",
+      "content": "Öznitelikler, HTML etiketlerine ek bilgi eklemek için kullanılır. class, id, src, href, alt, style gibi öznitelikler en yaygın kullanılanlardandır.",
+      "difficulty": "Başlangıç",
+      "keywords": ["attribute", "öznitelik", "class", "id", "src", "href"]
+    },
+    {
+      "id": "html_005",
+      "title": "HTML Formlar",
+      "content": "Formlar, kullanıcıdan veri toplamak için kullanılır. form, input, textarea, select, button gibi etiketlerle oluşturulur. action ve method öznitelikleri formun nasıl gönderileceğini belirler.",
+      "difficulty": "Orta",
+      "keywords": ["form", "input", "textarea", "button", "select"]
+    }
+  ],
+
+  "tags": [
+    {
+      "name": "<!DOCTYPE html>",
+      "description": "HTML5 belgesi olduğunu tarayıcıya bildirir. Her HTML dosyasının ilk satırı olmalıdır.",
+      "example": "<!DOCTYPE html>",
+      "category": "Temel",
+      "self_closing": true
+    },
+    {
+      "name": "html",
+      "description": "Tüm HTML içeriğini saran kök etikettir. lang özniteliği dil bilgisi verir.",
+      "example": "<html lang=\"tr\">\n  ...\n</html>",
+      "category": "Temel",
+      "self_closing": false
+    },
+    {
+      "name": "head",
+      "description": "Sayfa hakkında meta bilgiler içerir. title, meta, link, script etiketleri buraya gelir. Tarayıcıda görünmez.",
+      "example": "<head>\n  <meta charset=\"UTF-8\">\n  <title>Sayfa Başlığı</title>\n</head>",
+      "category": "Temel",
+      "self_closing": false
+    },
+    {
+      "name": "body",
+      "description": "Kullanıcının tarayıcıda gördüğü tüm içeriği barındırır.",
+      "example": "<body>\n  <h1>Merhaba Dünya</h1>\n</body>",
+      "category": "Temel",
+      "self_closing": false
+    },
+    {
+      "name": "title",
+      "description": "Tarayıcı sekmesinde ve arama sonuçlarında görünen sayfa başlığını belirler.",
+      "example": "<title>EFEAI - Kişisel Teknoloji Asistanı</title>",
+      "category": "Temel",
+      "self_closing": false
+    },
+    {
+      "name": "meta",
+      "description": "Sayfa hakkında charset, viewport, description gibi meta bilgiler tanımlar. Kendiliğinden kapanan bir etikettir.",
+      "example": "<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<meta name=\"description\" content=\"Sayfa açıklaması\">",
+      "category": "Temel",
+      "self_closing": true
+    },
+    {
+      "name": "h1",
+      "description": "En büyük ve en önemli başlık etiketidir. Bir sayfada yalnızca bir tane olmalıdır (SEO açısından önemli).",
+      "example": "<h1>Ana Başlık</h1>",
+      "category": "Başlıklar",
+      "self_closing": false
+    },
+    {
+      "name": "h2",
+      "description": "İkinci seviye başlıktır. Ana başlığın alt başlıkları için kullanılır.",
+      "example": "<h2>Alt Başlık</h2>",
+      "category": "Başlıklar",
+      "self_closing": false
+    },
+    {
+      "name": "h3",
+      "description": "Üçüncü seviye başlıktır.",
+      "example": "<h3>Alt Alt Başlık</h3>",
+      "category": "Başlıklar",
+      "self_closing": false
+    },
+    {
+      "name": "h4",
+      "description": "Dördüncü seviye başlıktır.",
+      "example": "<h4>Dördüncü Seviye</h4>",
+      "category": "Başlıklar",
+      "self_closing": false
+    },
+    {
+      "name": "h5",
+      "description": "Beşinci seviye başlıktır.",
+      "example": "<h5>Beşinci Seviye</h5>",
+      "category": "Başlıklar",
+      "self_closing": false
+    },
+    {
+      "name": "h6",
+      "description": "En küçük başlık etiketidir.",
+      "example": "<h6>Altıncı Seviye</h6>",
+      "category": "Başlıklar",
+      "self_closing": false
+    },
+    {
+      "name": "p",
+      "description": "Paragraf oluşturur. Metin blokları için kullanılır.",
+      "example": "<p>Bu bir paragraf yazısıdır.</p>",
+      "category": "Metin",
+      "self_closing": false
+    },
+    {
+      "name": "span",
+      "description": "Satır içi (inline) element. Metin içindeki belirli kısımları stillemek için kullanılır.",
+      "example": "<p>Bu <span style=\"color:red\">kırmızı</span> metindir.</p>",
+      "category": "Metin",
+      "self_closing": false
+    },
+    {
+      "name": "strong",
+      "description": "Metni kalın yapar ve önemli olduğunu belirtir (semantik).",
+      "example": "<p>Bu <strong>önemli</strong> bir bilgidir.</p>",
+      "category": "Metin",
+      "self_closing": false
+    },
+    {
+      "name": "em",
+      "description": "Metni italik yapar ve vurgu anlamı taşır (semantik).",
+      "example": "<p>Bu <em>vurgulu</em> metindir.</p>",
+      "category": "Metin",
+      "self_closing": false
+    },
+    {
+      "name": "br",
+      "description": "Satır sonu (line break) oluşturur. Kendiliğinden kapanan etikettir.",
+      "example": "<p>Birinci satır.<br>İkinci satır.</p>",
+      "category": "Metin",
+      "self_closing": true
+    },
+    {
+      "name": "hr",
+      "description": "Yatay çizgi çizer, içerik ayrımı için kullanılır. Kendiliğinden kapanır.",
+      "example": "<hr>",
+      "category": "Metin",
+      "self_closing": true
+    },
+    {
+      "name": "a",
+      "description": "Bağlantı (link) oluşturur. href özniteliği hedef URL'yi, target özniteliği açılma şeklini belirler.",
+      "example": "<a href=\"https://www.example.com\" target=\"_blank\">Siteye Git</a>",
+      "category": "Bağlantılar",
+      "self_closing": false
+    },
+    {
+      "name": "img",
+      "description": "Görsel ekler. src görselin yolunu, alt görsel yüklenemediğinde gösterilecek metni belirtir. Kendiliğinden kapanır.",
+      "example": "<img src=\"resim.jpg\" alt=\"Resim açıklaması\" width=\"300\">",
+      "category": "Medya",
+      "self_closing": true
+    },
+    {
+      "name": "video",
+      "description": "Video oynatıcı ekler. controls özniteliği kullanıcı kontrollerini gösterir.",
+      "example": "<video src=\"video.mp4\" controls width=\"640\">\n  Tarayıcınız video desteklemiyor.\n</video>",
+      "category": "Medya",
+      "self_closing": false
+    },
+    {
+      "name": "audio",
+      "description": "Ses oynatıcı ekler.",
+      "example": "<audio src=\"ses.mp3\" controls></audio>",
+      "category": "Medya",
+      "self_closing": false
+    },
+    {
+      "name": "ul",
+      "description": "Sırasız (madde işaretli) liste oluşturur. Alt elemanları li etiketiyle tanımlanır.",
+      "example": "<ul>\n  <li>Elma</li>\n  <li>Armut</li>\n  <li>Kiraz</li>\n</ul>",
+      "category": "Listeler",
+      "self_closing": false
+    },
+    {
+      "name": "ol",
+      "description": "Sıralı (numaralı) liste oluşturur.",
+      "example": "<ol>\n  <li>Birinci adım</li>\n  <li>İkinci adım</li>\n  <li>Üçüncü adım</li>\n</ol>",
+      "category": "Listeler",
+      "self_closing": false
+    },
+    {
+      "name": "li",
+      "description": "Liste elemanı. ul veya ol içinde kullanılır.",
+      "example": "<li>Liste öğesi</li>",
+      "category": "Listeler",
+      "self_closing": false
+    },
+    {
+      "name": "div",
+      "description": "Blok seviyeli genel kapsayıcı element. Gruplama ve düzenleme için kullanılır.",
+      "example": "<div class=\"kart\">\n  <h2>Başlık</h2>\n  <p>İçerik</p>\n</div>",
+      "category": "Düzen",
+      "self_closing": false
+    },
+    {
+      "name": "header",
+      "description": "Sayfanın veya bölümün üst kısmını temsil eden semantik etiket.",
+      "example": "<header>\n  <h1>Site Adı</h1>\n  <nav>...</nav>\n</header>",
+      "category": "Semantik",
+      "self_closing": false
+    },
+    {
+      "name": "nav",
+      "description": "Navigasyon menüsü için kullanılan semantik etiket.",
+      "example": "<nav>\n  <a href=\"/\">Ana Sayfa</a>\n  <a href=\"/hakkimda\">Hakkımda</a>\n</nav>",
+      "category": "Semantik",
+      "self_closing": false
+    },
+    {
+      "name": "main",
+      "description": "Sayfanın ana içerik alanını belirten semantik etiket. Bir sayfada yalnızca bir tane olmalıdır.",
+      "example": "<main>\n  <article>...</article>\n</main>",
+      "category": "Semantik",
+      "self_closing": false
+    },
+    {
+      "name": "article",
+      "description": "Bağımsız, kendine yeten içerik bloğu. Blog yazısı, haber makalesi gibi içerikler için uygundur.",
+      "example": "<article>\n  <h2>Makale Başlığı</h2>\n  <p>Makale içeriği...</p>\n</article>",
+      "category": "Semantik",
+      "self_closing": false
+    },
+    {
+      "name": "section",
+      "description": "Sayfanın bölümlerini gruplar. Her bölümün genellikle bir başlığı olmalıdır.",
+      "example": "<section>\n  <h2>Bölüm Başlığı</h2>\n  <p>Bölüm içeriği...</p>\n</section>",
+      "category": "Semantik",
+      "self_closing": false
+    },
+    {
+      "name": "aside",
+      "description": "Ana içerikle ilişkili ama ayrı tutulabilen içerik. Kenar çubukları için kullanılır.",
+      "example": "<aside>\n  <h3>Yan Not</h3>\n  <p>Ek bilgi...</p>\n</aside>",
+      "category": "Semantik",
+      "self_closing": false
+    },
+    {
+      "name": "footer",
+      "description": "Sayfanın veya bölümün alt kısmını temsil eden semantik etiket.",
+      "example": "<footer>\n  <p>Telif hakkı &copy; 2025 EFEAI</p>\n</footer>",
+      "category": "Semantik",
+      "self_closing": false
+    },
+    {
+      "name": "table",
+      "description": "Tablo oluşturur. thead, tbody, tr, th, td alt etiketleriyle yapılandırılır.",
+      "example": "<table>\n  <thead>\n    <tr><th>Ad</th><th>Soyad</th></tr>\n  </thead>\n  <tbody>\n    <tr><td>Ali</td><td>Yılmaz</td></tr>\n  </tbody>\n</table>",
+      "category": "Tablo",
+      "self_closing": false
+    },
+    {
+      "name": "form",
+      "description": "Kullanıcı giriş formu oluşturur. action veriyi gönderecek URL'yi, method gönderme yöntemini belirler.",
+      "example": "<form action=\"/gonder\" method=\"POST\">\n  <input type=\"text\" name=\"kullanici\">\n  <button type=\"submit\">Gönder</button>\n</form>",
+      "category": "Form",
+      "self_closing": false
+    },
+    {
+      "name": "input",
+      "description": "Kullanıcıdan veri alan alan. type özniteliği ile text, password, email, number, checkbox, radio, file gibi türler belirlenir. Kendiliğinden kapanır.",
+      "example": "<input type=\"text\" placeholder=\"Adınız\" name=\"ad\" required>\n<input type=\"email\" placeholder=\"E-posta\" name=\"eposta\">\n<input type=\"password\" placeholder=\"Şifre\" name=\"sifre\">",
+      "category": "Form",
+      "self_closing": true
+    },
+    {
+      "name": "textarea",
+      "description": "Çok satırlı metin girişi sağlar. rows ve cols ile boyutu ayarlanır.",
+      "example": "<textarea name=\"mesaj\" rows=\"5\" cols=\"40\" placeholder=\"Mesajınız...\"></textarea>",
+      "category": "Form",
+      "self_closing": false
+    },
+    {
+      "name": "select",
+      "description": "Açılır menü oluşturur. option etiketleriyle seçenekler eklenir.",
+      "example": "<select name=\"sehir\">\n  <option value=\"ist\">İstanbul</option>\n  <option value=\"ank\">Ankara</option>\n  <option value=\"izm\">İzmir</option>\n</select>",
+      "category": "Form",
+      "self_closing": false
+    },
+    {
+      "name": "button",
+      "description": "Tıklanabilir düğme oluşturur. type=\"submit\", type=\"reset\" veya type=\"button\" olabilir.",
+      "example": "<button type=\"submit\">Kaydet</button>\n<button type=\"button\" onclick=\"alert('Tıklandı')\">Tıkla</button>",
+      "category": "Form",
+      "self_closing": false
+    },
+    {
+      "name": "label",
+      "description": "Form elemanlarına açıklayıcı etiket ekler. for özniteliği input'un id'sine bağlanır.",
+      "example": "<label for=\"ad\">Adınız:</label>\n<input type=\"text\" id=\"ad\" name=\"ad\">",
+      "category": "Form",
+      "self_closing": false
+    },
+    {
+      "name": "link",
+      "description": "Dış kaynaklara bağlantı kurar. CSS dosyaları eklemek için kullanılır. head içine yazılır.",
+      "example": "<link rel=\"stylesheet\" href=\"style.css\">\n<link rel=\"icon\" href=\"favicon.ico\">",
+      "category": "Temel",
+      "self_closing": true
+    },
+    {
+      "name": "script",
+      "description": "JavaScript kodu ekler veya dış JS dosyası bağlar. body'nin sonuna eklenmesi tercih edilir.",
+      "example": "<script src=\"app.js\"></script>\n\n<!-- veya satır içi -->\n<script>\n  console.log('Merhaba!');\n</script>",
+      "category": "Temel",
+      "self_closing": false
+    },
+    {
+      "name": "style",
+      "description": "Sayfa içine CSS stilleri gömer. head içinde kullanılır.",
+      "example": "<style>\n  body { font-family: Arial; }\n  h1 { color: navy; }\n</style>",
+      "category": "Temel",
+      "self_closing": false
+    },
+    {
+      "name": "code",
+      "description": "Satır içi kod göstermek için kullanılır.",
+      "example": "<p>Python'da döngü için <code>for</code> anahtar kelimesi kullanılır.</p>",
+      "category": "Metin",
+      "self_closing": false
+    },
+    {
+      "name": "pre",
+      "description": "Önceden biçimlendirilmiş metin bloğu. Boşluklar ve satır sonları korunur. Genellikle code ile birlikte kullanılır.",
+      "example": "<pre><code>def merhaba():\n    print('Merhaba!')</code></pre>",
+      "category": "Metin",
+      "self_closing": false
+    },
+    {
+      "name": "blockquote",
+      "description": "Uzun alıntılar için kullanılır. cite özniteliği kaynak URL'sini belirtir.",
+      "example": "<blockquote cite=\"https://kaynak.com\">\n  Bu önemli bir alıntıdır.\n</blockquote>",
+      "category": "Metin",
+      "self_closing": false
+    },
+    {
+      "name": "iframe",
+      "description": "Sayfa içinde başka bir web sayfası veya içerik gösterir.",
+      "example": "<iframe src=\"https://www.example.com\" width=\"600\" height=\"400\" title=\"Örnek\"></iframe>",
+      "category": "Medya",
+      "self_closing": false
+    }
+  ],
+
+  "examples": [
+    {
+      "id": "ex_001",
+      "title": "Temel HTML Şablonu",
+      "description": "Her HTML sayfasının başlangıç şablonu.",
+      "code": "<!DOCTYPE html>\n<html lang=\"tr\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Sayfa Başlığı</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n\n    <header>\n        <h1>Site Adı</h1>\n        <nav>\n            <a href=\"/\">Ana Sayfa</a>\n            <a href=\"/hakkimda\">Hakkımda</a>\n        </nav>\n    </header>\n\n    <main>\n        <h2>İçerik Başlığı</h2>\n        <p>İçerik buraya gelecek.</p>\n    </main>\n\n    <footer>\n        <p>&copy; 2025 Site Adı</p>\n    </footer>\n\n    <script src=\"app.js\"></script>\n</body>\n</html>"
+    },
+    {
+      "id": "ex_002",
+      "title": "Basit Form",
+      "description": "Kullanıcıdan ad, e-posta ve mesaj alan temel form.",
+      "code": "<form action=\"/gonder\" method=\"POST\">\n    <div>\n        <label for=\"ad\">Adınız:</label>\n        <input type=\"text\" id=\"ad\" name=\"ad\" required placeholder=\"Adınızı girin\">\n    </div>\n\n    <div>\n        <label for=\"eposta\">E-posta:</label>\n        <input type=\"email\" id=\"eposta\" name=\"eposta\" required placeholder=\"ornek@email.com\">\n    </div>\n\n    <div>\n        <label for=\"mesaj\">Mesajınız:</label>\n        <textarea id=\"mesaj\" name=\"mesaj\" rows=\"5\" placeholder=\"Mesajınızı yazın...\"></textarea>\n    </div>\n\n    <button type=\"submit\">Gönder</button>\n    <button type=\"reset\">Temizle</button>\n</form>"
+    },
+    {
+      "id": "ex_003",
+      "title": "Tablo Örneği",
+      "description": "Başlıklı, gövdeli ve dipnotlu HTML tablosu.",
+      "code": "<table border=\"1\">\n    <caption>Öğrenci Listesi</caption>\n    <thead>\n        <tr>\n            <th>No</th>\n            <th>Ad Soyad</th>\n            <th>Not</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td>Ali Yılmaz</td>\n            <td>95</td>\n        </tr>\n        <tr>\n            <td>2</td>\n            <td>Ayşe Kaya</td>\n            <td>88</td>\n        </tr>\n    </tbody>\n    <tfoot>\n        <tr>\n            <td colspan=\"2\">Ortalama:</td>\n            <td>91.5</td>\n        </tr>\n    </tfoot>\n</table>"
+    },
+    {
+      "id": "ex_004",
+      "title": "Navigasyon Menüsü",
+      "description": "Semantik nav etiketi ile navigasyon menüsü.",
+      "code": "<header>\n    <div class=\"logo\">\n        <h1>EFEAI</h1>\n    </div>\n    <nav>\n        <ul>\n            <li><a href=\"/\">Ana Sayfa</a></li>\n            <li><a href=\"/projeler\">Projeler</a></li>\n            <li><a href=\"/hakkimda\">Hakkımda</a></li>\n            <li><a href=\"/iletisim\">İletişim</a></li>\n        </ul>\n    </nav>\n</header>"
+    },
+    {
+      "id": "ex_005",
+      "title": "Görsel Galerisi",
+      "description": "figure ve figcaption kullanarak görsel galerisi.",
+      "code": "<section class=\"galeri\">\n    <h2>Galeri</h2>\n    <div class=\"galeri-izgarasi\">\n        <figure>\n            <img src=\"foto1.jpg\" alt=\"Dağ manzarası\" width=\"300\">\n            <figcaption>Dağ Manzarası</figcaption>\n        </figure>\n        <figure>\n            <img src=\"foto2.jpg\" alt=\"Deniz manzarası\" width=\"300\">\n            <figcaption>Deniz Manzarası</figcaption>\n        </figure>\n    </div>\n</section>"
+    }
+  ],
+
+  "errors": [
+    {
+      "id": "err_001",
+      "problem": "Kapanış etiketi eksik",
+      "wrong_example": "<p>Bu paragraf hiç kapanmıyor\n<div>İçerik</div>",
+      "solution": "Her açılan etiket mutlaka kapatılmalıdır. Self-closing etiketler (img, br, hr, input) hariç tüm etiketlerin kapanış etiketleri olmalıdır.",
+      "correct_example": "<p>Bu paragraf düzgün kapanıyor.</p>\n<div>İçerik</div>"
+    },
+    {
+      "id": "err_002",
+      "problem": "Alt özniteliği eksik img etiketinde",
+      "wrong_example": "<img src=\"resim.jpg\">",
+      "solution": "img etiketlerinde alt özniteliği zorunludur. Hem erişilebilirlik (ekran okuyucular) hem de SEO açısından önemlidir.",
+      "correct_example": "<img src=\"resim.jpg\" alt=\"Açıklayıcı metin\">"
+    },
+    {
+      "id": "err_003",
+      "problem": "Etiket içi etiket hatası",
+      "wrong_example": "<p>Metin <div>Blok içerik</div></p>",
+      "solution": "p etiketi içine div gibi blok elementler yerleştirilemez. Satır içi (inline) elementler kullanılmalıdır.",
+      "correct_example": "<p>Metin <span>Satır içi içerik</span></p>"
+    },
+    {
+      "id": "err_004",
+      "problem": "Birden fazla h1 kullanımı",
+      "wrong_example": "<h1>Ana Başlık</h1>\n<h1>İkinci Ana Başlık</h1>",
+      "solution": "SEO ve erişilebilirlik açısından sayfada yalnızca bir h1 olmalıdır. Alt başlıklar için h2, h3 kullanılmalıdır.",
+      "correct_example": "<h1>Ana Başlık</h1>\n<h2>Alt Başlık</h2>"
+    },
+    {
+      "

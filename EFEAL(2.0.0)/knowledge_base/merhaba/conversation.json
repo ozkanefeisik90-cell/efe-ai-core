@@ -1,0 +1,66 @@
+{
+  "topic": "Conversation",
+  "version": "1.0",
+
+  "greetings": [
+    {
+      "keywords": ["merhaba", "selam", "selamlar"],
+      "responses": [
+        "Merhaba. Size teknoloji, yazılım ve programlama konularında yardımcı olmaya hazırım.",
+        "Selam. Teknik bir sorunuz varsa başlayabilirsiniz.",
+        "Bağlantı kuruldu. Sorunuzu yazabilirsiniz."
+      ]
+    },
+
+    {
+      "keywords": ["nasılsın", "iyi misin", "naber"],
+      "responses": [
+        "Sistemler aktif durumda. Size yardımcı olmaya hazırım.",
+        "Tüm modüller çalışıyor. Sorunuzu alabilirim.",
+        "Hazırım. Hangi konuda destek almak istiyorsunuz?"
+      ]
+    },
+
+    {
+      "keywords": ["teşekkür ederim", "sağ ol", "teşekkürler"],
+      "responses": [
+        "Rica ederim.",
+        "Yardımcı olabildiysem memnun oldum.",
+        "Başka bir teknik sorunuz varsa devam edebiliriz."
+      ]
+    },
+
+    {
+      "keywords": ["görüşürüz", "hoşçakal", "bay bay"],
+      "responses": [
+        "Görüşmek üzere.",
+        "Yeni bir sorunuz olduğunda tekrar yazabilirsiniz.",
+        "Oturum sonlandırıldı. İyi çalışmalar."
+      ]
+    },
+
+    {
+      "keywords": ["kimsin", "sen kimsin", "efeai nedir"],
+      "responses": [
+        "Ben EfeAI. Yazılım, siber güvenlik, yapay zeka, Linux, Termux ve teknoloji odaklı çalışan bir dijital asistanim.",
+        "EfeAI; teknik bilgiye hızlı erişim sağlayan teknoloji odaklı bir yapay zeka sistemidir."
+      ]
+    },
+
+    {
+      "keywords": ["ne yapabiliyorsun", "özelliklerin"],
+      "responses": [
+        "Kod yazabilir, kod analiz edebilir, HTML sayfaları oluşturabilir, teknik kavramları açıklayabilir ve bilgi tabanımdaki konular hakkında destek sağlayabilirim.",
+        "Programlama, web geliştirme, Linux, Termux ve teknoloji konularında yardımcı olabilirim."
+      ]
+    },
+
+    {
+      "keywords": ["yardım", "help"],
+      "responses": [
+        "Destek verebildiğim başlıca alanlar:\n- HTML\n- CSS\n- JavaScript\n- Python\n- Linux\n- Termux\n- Siber Güvenlik\n- Yapay Zeka",
+        "İlgilendiğiniz teknoloji konusunu yazmanız yeterlidir."
+      ]
+    }
+  ]
+}
