@@ -1,0 +1,32 @@
+{
+  "topic": "Flutter",
+  "subtopic": "flutter_nedir",
+  "difficulty": "Orta",
+  "definitions": [
+    {
+      "id": "flutter_tanim",
+      "content": "Flutter, Google tarafından geliştirilen açık kaynaklı UI framework'üdür. Dart programlama diliyle tek bir kod tabanından iOS, Android, web ve masaüstü uygulamaları geliştirmeyi sağlar."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Stateless Widget",
+      "code": "import 'package:flutter/material.dart';\n\nclass MerhabaWidget extends StatelessWidget {\n  final String isim;\n  const MerhabaWidget({super.key, required this.isim});\n\n  @override\n  Widget build(BuildContext context) {\n    return Scaffold(\n      appBar: AppBar(title: Text('EFEAI')),\n      body: Center(\n        child: Text(\n          'Merhaba, $isim!',\n          style: Theme.of(context).textTheme.headlineMedium,\n        ),\n      ),\n    );\n  }\n}"
+    },
+    {
+      "title": "Stateful Widget ile Sayaç",
+      "code": "class Sayac extends StatefulWidget {\n  const Sayac({super.key});\n  @override\n  State<Sayac> createState() => _SayacState();\n}\n\nclass _SayacState extends State<Sayac> {\n  int _sayac = 0;\n\n  @override\n  Widget build(BuildContext context) {\n    return Column(\n      children: [\n        Text('$_sayac', style: TextStyle(fontSize: 48)),\n        ElevatedButton(\n          onPressed: () => setState(() => _sayac++),\n          child: const Text('Artır'),\n        ),\n      ],\n    );\n  }\n}"
+    }
+  ],
+  "tips": [
+    {"tip": "const widget kullan — rebuild sırasında yeniden oluşturulmaz, performans artar.", "category": "Performans"},
+    {"tip": "Widget ağacını küçük, yeniden kullanılabilir widget'lara böl.", "category": "Mimari"},
+    {"tip": "State yönetimi için Riverpod veya Provider kullan.", "category": "State Yönetimi"}
+  ],
+  "errors": [
+    {"problem": "setState() disposed widget'ta çağrılıyor", "solution": "if (mounted) setState(() {}) kullan"},
+    {"problem": "Overflow hatası", "solution": "Column/Row içinde Expanded veya Flexible kullan"},
+    {"problem": "BuildContext async gap", "solution": "await sonrasında mounted kontrolü yap"}
+  ],
+  "related_topics": ["Dart", "Riverpod", "Material Design", "Navigator"]
+}
