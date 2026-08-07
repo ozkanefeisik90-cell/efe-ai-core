@@ -1,0 +1,32 @@
+{
+  "topic": "Siber Güvenlik",
+  "subtopic": "siber_guvenlik_nedir",
+  "difficulty": "Orta",
+  "definitions": [
+    {
+      "id": "sibgüv_tanim",
+      "content": "Siber güvenlik, bilgisayar sistemleri, ağlar ve verileri dijital saldırılardan, yetkisiz erişimden ve hasardan koruma pratiğidir. Gizlilik, bütünlük ve erişilebilirlik (CIA üçgeni) temel ilkeleri oluşturur."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Güvenli Şifre Üretimi (Python)",
+      "code": "import secrets\nimport string\n\ndef guvenli_sifre_uret(uzunluk: int = 16) -> str:\n    \"\"\"Kriptografik olarak güvenli şifre üretir.\"\"\"\n    alfabe = string.ascii_letters + string.digits + '!@#$%^&*'\n    return ''.join(secrets.choice(alfabe) for _ in range(uzunluk))\n\nprint(guvenli_sifre_uret(20))  # Örn: K$2mXp8#vN4qL!9wR@jZ"
+    },
+    {
+      "title": "Input Doğrulama",
+      "code": "import re\n\ndef guvenli_eposta_dogrula(eposta: str) -> bool:\n    \"\"\"E-posta adresini doğrular.\"\"\"\n    desen = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$'\n    return bool(re.match(desen, eposta))\n\n# SQL injection önleme — ASLA string birleştirme yapma\n# YANLIŞ:\nsorgu = f\"SELECT * FROM kullanicilar WHERE isim = '{kullanici_girdisi}'\"\n\n# DOĞRU:\nsorgu = \"SELECT * FROM kullanicilar WHERE isim = ?\"\ncursor.execute(sorgu, (kullanici_girdisi,))"
+    }
+  ],
+  "tips": [
+    {"tip": "Asla şifreleri plaintext saklamak; bcrypt veya argon2 ile hash'le.", "category": "Kritik"},
+    {"tip": "Kullanıcı girdisine asla güvenme — her zaman doğrula ve sanitize et.", "category": "Kritik"},
+    {"tip": "HTTPS kullan, HTTP asla — özellikle form ve API iletişiminde.", "category": "Ağ"}
+  ],
+  "errors": [
+    {"problem": "SQL Injection", "solution": "Parametre bağlama kullan, string birleştirme yapma"},
+    {"problem": "XSS Saldırısı", "solution": "innerHTML yerine textContent kullan, çıktıyı escape et"},
+    {"problem": "Hardcoded şifre/key", "solution": ".env dosyası ve ortam değişkeni kullan"}
+  ],
+  "related_topics": ["SQL Injection", "XSS", "HTTPS", "Kriptografi"]
+}
