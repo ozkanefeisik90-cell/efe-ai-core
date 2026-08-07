@@ -1,0 +1,16 @@
+# EFEAI - Gerekli Python Kütüphaneleri
+# Sadece Python standart kütüphaneleri kullanılmaktadır.
+# Harici bağımlılık yoktur — pip install gerekmez.
+# Python 3.8+ ile çalışır.
+
+# Kullanılan standart kütüphaneler:
+# sqlite3  — Yerel hafıza ve veritabanı
+# json     — Bilgi tabanı okuma/yazma
+# os       — Dosya sistemi işlemleri
+# datetime — Tarih/saat işlemleri
+# re       — Düzenli ifadeler (arama motoru)
+# pathlib  — Dosya yolu işlemleri
+# shutil   — Yedekleme işlemleri
+# random   — Karakter motoru varyasyonları
+# textwrap — Terminal çıktı biçimlendirme
+# zipfile  — Yedek dosyası oluşturma
