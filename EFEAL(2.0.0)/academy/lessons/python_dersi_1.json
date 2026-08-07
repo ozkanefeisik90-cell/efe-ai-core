@@ -1,0 +1,36 @@
+{
+  "lesson_id": "python_001",
+  "topic": "Python",
+  "title": "Python'a Giriş",
+  "level": "Başlangıç",
+  "order": 1,
+  "duration_minutes": 20,
+  "objectives": [
+    "Python kurulumu ve çalıştırma",
+    "Temel veri türlerini öğrenme",
+    "İlk Python programını yazma"
+  ],
+  "content": [
+    {
+      "bölüm": "Python Neden?",
+      "metin": "Python okunabilir sözdizimi, geniş kütüphane ekosistemi ve çok yönlü kullanım alanlarıyla başlangıç için ideal dildir."
+    },
+    {
+      "bölüm": "Temel Veri Türleri",
+      "metin": "int (tam sayı), float (ondalık), str (metin), bool (doğru/yanlış) Python'un temel türleridir."
+    }
+  ],
+  "code_examples": [
+    {
+      "title": "Değişkenler ve Print",
+      "code": "isim = 'Efe'\nyas = 20\naktif = True\nnotlar = [85, 90, 78]\n\nprint(f'{isim}, {yas} yaşında.')\nprint('Ortalama:', sum(notlar) / len(notlar))"
+    }
+  ],
+  "exercises": [
+    {
+      "soru": "Ad, yaş ve hobilerini içeren bir profil bilgisi yazdır.",
+      "ipucu": "f-string kullan: f'Merhaba, benim adım {isim}'"
+    }
+  ],
+  "next_lesson": "python_002"
+}
