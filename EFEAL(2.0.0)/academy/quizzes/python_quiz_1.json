@@ -1,0 +1,49 @@
+{
+  "quiz_id": "python_quiz_001",
+  "topic": "Python",
+  "title": "Python Temel Quiz",
+  "level": "Başlangıç",
+  "duration_minutes": 10,
+  "sorular": [
+    {
+      "id": 1,
+      "soru": "Python'da yorum satırı nasıl başlar?",
+      "secenekler": ["A) //", "B) /*", "C) #", "D) --"],
+      "dogru": "C",
+      "aciklama": "Python'da yorum satırları # ile başlar."
+    },
+    {
+      "id": 2,
+      "soru": "Aşağıdakilerden hangisi Python'da geçerli bir değişken adıdır?",
+      "secenekler": ["A) 2yas", "B) yas-biri", "C) yas_biri", "D) class"],
+      "dogru": "C",
+      "aciklama": "Değişken adı rakamla başlayamaz, - içeremez ve reserved keyword olamaz."
+    },
+    {
+      "id": 3,
+      "soru": "len('EFEAI') değeri nedir?",
+      "secenekler": ["A) 4", "B) 5", "C) 6", "D) Hata"],
+      "dogru": "B",
+      "aciklama": "'EFEAI' 5 karakterden oluşur: E-F-E-A-I"
+    },
+    {
+      "id": 4,
+      "soru": "Python'da liste oluşturmak için hangi semboller kullanılır?",
+      "secenekler": ["A) {}", "B) ()", "C) []", "D) <>"],
+      "dogru": "C",
+      "aciklama": "Listeler köşeli parantez ile tanımlanır: liste = [1, 2, 3]"
+    },
+    {
+      "id": 5,
+      "soru": "print(type(3.14)) çıktısı nedir?",
+      "secenekler": [
+        "A) <class 'int'>",
+        "B) <class 'str'>",
+        "C) <class 'float'>",
+        "D) <class 'double'>"
+      ],
+      "dogru": "C",
+      "aciklama": "3.14 ondalık sayıdır, tipi float'tır."
+    }
+  ]
+}

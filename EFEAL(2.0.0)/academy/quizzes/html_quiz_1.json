@@ -1,0 +1,49 @@
+{
+  "quiz_id": "html_quiz_001",
+  "topic": "HTML",
+  "title": "HTML Temel Quiz",
+  "level": "Başlangıç",
+  "duration_minutes": 10,
+  "sorular": [
+    {
+      "id": 1,
+      "soru": "HTML'in açılımı nedir?",
+      "secenekler": [
+        "A) Hyperlink and Text Markup Language",
+        "B) HyperText Markup Language",
+        "C) High Text Machine Language",
+        "D) HyperText Making Language"
+      ],
+      "dogru": "B",
+      "aciklama": "HTML, HyperText Markup Language'ın kısaltmasıdır."
+    },
+    {
+      "id": 2,
+      "soru": "En büyük başlık etiketi hangisidir?",
+      "secenekler": ["A) <h6>", "B) <header>", "C) <h1>", "D) <big>"],
+      "dogru": "C",
+      "aciklama": "h1 en büyük başlık, h6 en küçük başlıktır."
+    },
+    {
+      "id": 3,
+      "soru": "Kendiliğinden kapanan etiket hangisidir?",
+      "secenekler": ["A) <p>", "B) <div>", "C) <span>", "D) <img>"],
+      "dogru": "D",
+      "aciklama": "<img> kendi kendine kapanır: <img src='...' alt='...'>"
+    },
+    {
+      "id": 4,
+      "soru": "CSS dosyasını HTML'e bağlamak için kullanılan etiket?",
+      "secenekler": ["A) <style>", "B) <link>", "C) <script>", "D) <css>"],
+      "dogru": "B",
+      "aciklama": "<link rel='stylesheet' href='stil.css'> ile CSS bağlanır."
+    },
+    {
+      "id": 5,
+      "soru": "Sırasız liste oluşturmak için hangi etiket kullanılır?",
+      "secenekler": ["A) <ol>", "B) <li>", "C) <ul>", "D) <list>"],
+      "dogru": "C",
+      "aciklama": "<ul> (unordered list) sırasız, <ol> (ordered list) sıralı liste oluşturur."
+    }
+  ]
+}
