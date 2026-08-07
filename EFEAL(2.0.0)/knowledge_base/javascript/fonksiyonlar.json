@@ -1,0 +1,30 @@
+{
+  "topic": "JavaScript Fonksiyonlar",
+  "subtopic": "js_fonksiyonlar",
+  "difficulty": "Başlangıç",
+  "definitions": [
+    {
+      "id": "js_fonksiyon_tanim",
+      "content": "JavaScript'te fonksiyon, birinci sınıf nesnedir; değişkene atanabilir, argüman olarak geçilebilir ve döndürülebilir. function bildirimi, function ifadesi ve arrow function olmak üç tür yazım şekli vardır."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Fonksiyon Türleri",
+      "code": "// 1. Function declaration (hoisted)\nfunction topla(a, b) {\n    return a + b;\n}\n\n// 2. Function expression\nconst carp = function(a, b) {\n    return a * b;\n};\n\n// 3. Arrow function\nconst bol = (a, b) => a / b;\n\n// 4. Default parametreler\nconst selamla = (isim = 'Misafir') => `Merhaba, ${isim}!`;"
+    },
+    {
+      "title": "Closure",
+      "code": "function sayac() {\n    let deger = 0;\n    return {\n        artir: () => ++deger,\n        azalt: () => --deger,\n        deger: () => deger,\n    };\n}\n\nconst c = sayac();\nc.artir();\nc.artir();\nconsole.log(c.deger()); // 2"
+    }
+  ],
+  "tips": [
+    {"tip": "Arrow function'da this lexical scope kullanır — callback'lerde güvenli.", "category": "this"},
+    {"tip": "Pure function yan etki üretmez — test edilmesi ve anlaşılması kolaydır.", "category": "Fonksiyonel"}
+  ],
+  "errors": [
+    {"problem": "this undefined (strict mode)", "solution": "Arrow function kullan veya .bind(this) çağır"},
+    {"problem": "Fonksiyon tanımlanmadan çağrılıyor (let/const)", "solution": "Function declaration kullan veya tanımı üste taşı"}
+  ],
+  "related_topics": ["JavaScript", "Closure", "Async/Await", "Prototype"]
+}

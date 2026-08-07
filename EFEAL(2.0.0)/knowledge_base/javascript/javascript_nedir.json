@@ -1,0 +1,36 @@
+{
+  "topic": "JavaScript",
+  "subtopic": "javascript_nedir",
+  "difficulty": "Başlangıç",
+  "definitions": [
+    {
+      "id": "js_tanim",
+      "content": "JavaScript, web tarayıcılarında çalışan, dinamik ve etkileşimli web içeriği oluşturmak için kullanılan programlama dilidir. HTML ve CSS ile birlikte web'in üç temel teknolojisinden biridir. Node.js ile sunucu tarafında da kullanılır."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Temel JavaScript",
+      "code": "// Değişkenler\nconst isim = 'EFEAI';    // Sabit (değiştirilemez)\nlet yas = 1;              // Değişken\n\n// Şablon literal\nconsole.log(`Merhaba, ${isim}! Yaş: ${yas}`);\n\n// Fonksiyon\nconst topla = (a, b) => a + b;\nconsole.log(topla(3, 5)); // 8\n\n// Dizi ve map\nconst sayilar = [1, 2, 3, 4, 5];\nconst kareler = sayilar.map(x => x ** 2);\nconsole.log(kareler); // [1, 4, 9, 16, 25]"
+    },
+    {
+      "title": "DOM Manipülasyonu",
+      "code": "// Eleman seçme\nconst baslik = document.querySelector('h1');\nconst butonlar = document.querySelectorAll('.buton');\n\n// İçerik değiştirme\nbaslik.textContent = 'Yeni Başlık';\n\n// Olay dinleyici\nbutonlar.forEach(buton => {\n    buton.addEventListener('click', (e) => {\n        console.log('Tıklandı:', e.target.textContent);\n    });\n});"
+    },
+    {
+      "title": "Async/Await",
+      "code": "async function veriCek(url) {\n    try {\n        const yanit = await fetch(url);\n        const veri = await yanit.json();\n        return veri;\n    } catch (hata) {\n        console.error('Hata:', hata.message);\n        return null;\n    }\n}\n\n// Kullanım\nveriCek('https://api.example.com/veri')\n    .then(veri => console.log(veri));"
+    }
+  ],
+  "tips": [
+    {"tip": "var yerine const/let kullan — daha güvenli kapsam yönetimi.", "category": "Modern JS"},
+    {"tip": "=== kullan, == kullanma — type coercion hatalarını önler.", "category": "Güvenlik"},
+    {"tip": "Arrow function ile this bağlamı dış kapsamdan alınır.", "category": "this Bağlamı"}
+  ],
+  "errors": [
+    {"problem": "undefined is not a function", "solution": "Fonksiyonu çağırmadan önce tanımlandığından emin ol; const/let hoisted değil"},
+    {"problem": "Cannot read property of null", "solution": "DOM elemanı bulunmadan önce script çalışıyor; DOMContentLoaded bekle"},
+    {"problem": "Promise zinciri çalışmıyor", "solution": "async/await kullan veya .then().catch() eksiksiz zincirle"}
+  ],
+  "related_topics": ["HTML", "CSS", "React", "Node.js", "TypeScript"]
+}
