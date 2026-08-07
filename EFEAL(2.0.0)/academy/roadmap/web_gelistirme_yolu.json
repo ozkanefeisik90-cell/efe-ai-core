@@ -1,0 +1,43 @@
+{
+  "roadmap_id": "web_dev_001",
+  "baslik": "Web Geliştirme Yol Haritası",
+  "aciklama": "Sıfırdan Full-Stack Web Geliştirici olmak için aşamalı öğrenme planı",
+  "toplam_sure_hafta": 24,
+  "asamalar": [
+    {
+      "no": 1,
+      "baslik": "Temel Web Teknolojileri",
+      "sure_hafta": 4,
+      "konular": ["HTML5 semantik etiketler", "CSS3 ve Flexbox/Grid", "Responsive tasarım"],
+      "hedef": "Statik web sayfaları oluşturabilmek"
+    },
+    {
+      "no": 2,
+      "baslik": "JavaScript Temelleri",
+      "sure_hafta": 6,
+      "konular": ["Değişkenler ve veri türleri", "Fonksiyonlar ve scope", "DOM manipülasyonu", "Async/Await ve Fetch"],
+      "hedef": "Dinamik ve etkileşimli sayfalar yapabilmek"
+    },
+    {
+      "no": 3,
+      "baslik": "Backend Temelleri",
+      "sure_hafta": 6,
+      "konular": ["Python/Node.js", "RESTful API", "SQLite/PostgreSQL", "Authentication"],
+      "hedef": "API yazıp veritabanı kullanabilmek"
+    },
+    {
+      "no": 4,
+      "baslik": "Modern Framework",
+      "sure_hafta": 5,
+      "konular": ["React veya Vue.js", "State yönetimi", "API entegrasyonu"],
+      "hedef": "SPA (Single Page Application) geliştirmek"
+    },
+    {
+      "no": 5,
+      "baslik": "DevOps ve Deployment",
+      "sure_hafta": 3,
+      "konular": ["Git ve GitHub", "Linux temelleri", "CI/CD temelleri", "Bulut deployment"],
+      "hedef": "Projeyi canlıya alabilmek"
+    }
+  ]
+}

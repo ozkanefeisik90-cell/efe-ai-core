@@ -1,0 +1,43 @@
+{
+  "roadmap_id": "python_001",
+  "baslik": "Python Geliştirici Yol Haritası",
+  "aciklama": "Python ile yazılım geliştirici olmak için kapsamlı öğrenme planı",
+  "toplam_sure_hafta": 20,
+  "asamalar": [
+    {
+      "no": 1,
+      "baslik": "Python Temelleri",
+      "sure_hafta": 3,
+      "konular": ["Değişkenler, türler", "Koşullar ve döngüler", "Fonksiyonlar"],
+      "hedef": "Temel programlama mantığını kavramak"
+    },
+    {
+      "no": 2,
+      "baslik": "Veri Yapıları",
+      "sure_hafta": 3,
+      "konular": ["Liste, tuple, dict, set", "List comprehension", "File I/O"],
+      "hedef": "Veri işleme yapabilmek"
+    },
+    {
+      "no": 3,
+      "baslik": "Nesne Yönelimli Programlama",
+      "sure_hafta": 4,
+      "konular": ["Sınıflar ve kalıtım", "Kapsülleme", "Soyut sınıflar", "Tasarım desenleri"],
+      "hedef": "Büyük projeleri modüler yapıda yazabilmek"
+    },
+    {
+      "no": 4,
+      "baslik": "Web ve API",
+      "sure_hafta": 5,
+      "konular": ["Flask/FastAPI", "REST API tasarımı", "SQLAlchemy", "Authentication"],
+      "hedef": "Web uygulaması geliştirebilmek"
+    },
+    {
+      "no": 5,
+      "baslik": "İleri Konular",
+      "sure_hafta": 5,
+      "konular": ["Async programlama", "Testing", "Docker", "Veri Bilimi temelleri"],
+      "hedef": "Profesyonel düzey Python geliştirmek"
+    }
+  ]
+}
