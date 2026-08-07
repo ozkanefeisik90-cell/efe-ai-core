@@ -1,0 +1,32 @@
+{
+  "topic": "Linux",
+  "subtopic": "linux_nedir",
+  "difficulty": "Başlangıç",
+  "definitions": [
+    {
+      "id": "linux_tanim",
+      "content": "Linux, açık kaynaklı UNIX benzeri işletim sistemi çekirdeğidir. 1991'de Linus Torvalds tarafından geliştirilmiştir. Sunucular, gömülü sistemler ve Android'in temelini oluşturur."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Temel Komutlar",
+      "code": "# Dizin işlemleri\nls -la              # Dosyaları listele (ayrıntılı)\ncd /home/kullanici  # Dizin değiştir\npwd                 # Mevcut dizini göster\nmkdir proje         # Dizin oluştur\nrm -rf dizin/       # Dizini sil (dikkatli!)\n\n# Dosya işlemleri\ncat dosya.txt       # İçeriği göster\ngrep 'arama' *.py   # Metin ara\nfind . -name '*.py' # Dosya bul\nchmod +x script.sh  # Çalıştırma izni ver\n\n# Süreç yönetimi\nps aux              # Çalışan süreçler\nkill -9 PID         # Süreci sonlandır\ntop                 # Canlı sistem monitörü\n\n# Ağ\ncurl https://api.example.com\nping google.com\nifconfig / ip addr"
+    },
+    {
+      "title": "Bash Script",
+      "code": "#!/bin/bash\n# Script başlığı\n\nset -e  # Hata durumunda dur\n\nISIM=${1:-'Dünya'}  # Argüman veya varsayılan\n\necho \"Merhaba, $ISIM!\"\n\nif [ -f 'dosya.txt' ]; then\n    echo 'Dosya mevcut'\nelse\n    echo 'Dosya yok'\nfi\n\n# Döngü\nfor i in {1..5}; do\n    echo \"Sayı: $i\"\ndone"
+    }
+  ],
+  "tips": [
+    {"tip": "man komut_adi ile yardım sayfasını oku — her şey orada.", "category": "Başlangıç"},
+    {"tip": "rm -rf çalıştırmadan önce iki kez düşün — geri dönüşü yoktur.", "category": "Güvenlik"},
+    {"tip": "alias kısayollar tanımla: alias ll='ls -la'", "category": "Verimlilik"}
+  ],
+  "errors": [
+    {"problem": "Permission denied", "solution": "chmod +x dosya veya sudo ile çalıştır"},
+    {"problem": "Command not found", "solution": "which komut ile yolu kontrol et, apt/yum ile yükle"},
+    {"problem": "Disk doldu", "solution": "df -h ile disk kullanımı, du -sh */ ile büyük dizinleri bul"}
+  ],
+  "related_topics": ["Bash", "Terminal", "SSH", "Docker"]
+}
